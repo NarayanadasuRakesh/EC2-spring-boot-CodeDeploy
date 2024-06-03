@@ -7,5 +7,5 @@ phases:
   build:
     commands:
       - cd EC2-spring-boot-CodeDeploy
-      - echo "Building mrims hospital api"
+      - echo "EC2-spring-boot-CodeDeploy"
       - mvn clean install
