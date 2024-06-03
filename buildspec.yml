@@ -6,5 +6,6 @@ phases:
 
   build:
     commands:
+      - cd EC2-spring-boot-CodeDeploy
       - echo "EC2-spring-boot-CodeDeploy"
       - mvn clean install
