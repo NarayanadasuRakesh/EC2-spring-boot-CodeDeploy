@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ec2-user/server
+    destination: /home/ec2-user/java
 
 permissions:
   - object: /
@@ -12,19 +12,14 @@ permissions:
     group: ec2-user
 
 hooks:
-  BeforeInstall:
-    - location: server_clear.sh
+  ApplicationStop:
+    - location: scripts/privileges.sh
       timeout: 300
       runas: ec2-user
   AfterInstall:
-    - location: fix_privileges.sh
+    - location: scripts/server_start.sh
       timeout: 300
       runas: ec2-user
-  ApplicationStart:
-    - location: server_start.sh
-      timeout: 20
-      runas: ec2-user
-  ApplicationStop:
-    - location: server_stop.sh
-      timeout: 20
+    - location: scripts/server_stop.sh
+      timeout: 300
       runas: ec2-user
