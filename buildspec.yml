@@ -15,4 +15,5 @@ phases:
       - mvn clean install
 artifacts:
   files:
-    - target/*.jar
+    - '**/*'
+  base-directory: /home/ec2-user/java/java-hello-world-with-maven
