@@ -18,11 +18,11 @@ hooks:
       runas: ec2-user
   BeforeInstall:
    - location: scripts/server_clear.sh
-      timeout: 300
+      timeout: 60
       runas: ec2-user
   AfterInstall:
     - location: scripts/privileges.sh
-      timeout: 300
+      timeout: 60
       runas: ec2-user
   ApplicationStart:
     - location: scripts/server_start.sh
