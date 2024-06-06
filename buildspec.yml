@@ -16,4 +16,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: /home/ec2-user/java/java-hello-world-with-maven
+  base-directory: /home/ec2-user/java-hello-world-with-maven
