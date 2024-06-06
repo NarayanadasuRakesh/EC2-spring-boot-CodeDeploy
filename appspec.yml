@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: /
+  - source: /java-hello-world-with-maven
     destination: /home/ec2-user/java
 
 permissions:
