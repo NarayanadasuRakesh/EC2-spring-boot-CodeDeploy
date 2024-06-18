@@ -1,3 +1,2 @@
-#!/bin/bash
-# Clean up old deployment
-rm -rf /home/ec2-user/java
+#!/usr/bin/env bash
+sudo rm -rf /home/ec2-user/
