@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: target/*.jar
-    destination: /home/ec2-user/
+    destination: /home/ec2-user/java
 
 permissions:
   - object: /
@@ -20,10 +20,10 @@ hooks:
    - location: scripts/server_clear.sh
       timeout: 100
       runas: ec2-user
-  AfterInstall:
-    - location: scripts/privileges.sh
-      timeout: 100
-      runas: ec2-user
+  # AfterInstall:
+  #   - location: scripts/privileges.sh
+  #     timeout: 100
+  #     runas: ec2-user
   ApplicationStart:
     - location: scripts/server_start.sh
       timeout: 100
