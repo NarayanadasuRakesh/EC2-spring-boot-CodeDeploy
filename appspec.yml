@@ -3,10 +3,10 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ec2-user/java
+    destination: /home/ec2-user
 
 permissions:
-  - object: /home/ec2-user/java
+  - object: /home/ec2-user
     pattern: '**'
     mode: '0755'
     owner: ec2-user
