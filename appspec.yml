@@ -1,9 +1,6 @@
 version: 0.0
 os: linux
 
-# files:
-#   - source: /
-#     destination: /home/ec2-user/java
 files:
   - source: /
     destination: /home/ec2-user/java
@@ -12,8 +9,8 @@ permissions:
   - object: /home/ec2-user/java
     pattern: '**'
     mode: '0755'
-    owner: root
-    group: root
+    owner: ec2-user
+    group: ec2-user
     type:
       - file 
       - directory
@@ -22,17 +19,16 @@ hooks:
   ApplicationStop:
     - location: scripts/server_stop.sh
       timeout: 100
-      #runas: ec2-user
+      runas: ec2-user
   BeforeInstall:
-   - location: scripts/server_clear.sh
+    - location: scripts/server_clear.sh
       timeout: 100
-      #runas: ec2-user
-  AfterInstall:
-    - location: scripts/privileges.sh
-      timeout: 100
-      #runas: ec2-user
+      runas: ec2-user
+  # AfterInstall:
+  #   - location: scripts/privileges.sh
+  #     timeout: 100
+  #     runas: ec2-user
   ApplicationStart:
     - location: scripts/server_start.sh
       timeout: 100
-      #runas: ec2-user
-
+      runas: ec2-user
