@@ -13,12 +13,8 @@ phases:
     commands:
       - echo "Building the Java application"
       - mvn clean install
-  post_build:
-    commands:
-      - echo "Rename jar file"
-      - mv target/*.jar app.jar
 artifacts:
   files:
-    - app.jar
+    - 'target/*.jar'
     - 'scripts/*.sh'
     - appspec.yml
