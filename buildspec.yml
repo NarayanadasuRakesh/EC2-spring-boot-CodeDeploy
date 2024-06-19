@@ -13,12 +13,12 @@ phases:
     commands:
       - echo "Building the Java application"
       - mvn clean install
-# artifacts:
-#   files:
-#     - 'target/*.jar'
-#     - 'scripts/*.sh'
-#     - appspec.yml
 artifacts:
   files:
-    - '**/*'
-  base-directory: './'
+    - 'target/**/*'  # Which files should be included from dist/my-angular-project directory
+    - appspec.yml
+    - 'scripts/**/*'
+# artifacts:
+#   files:
+#     - '**/*'
+#   base-directory: './'
