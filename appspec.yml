@@ -5,8 +5,8 @@ os: linux
 #   - source: /
 #     destination: /home/ec2-user/java
 files:
-  - source: "./target"
-    destination: "/home/ec2-user/java"
+  - source: /
+    destination: /home/ec2-user/java
 
 permissions:
   - object: /home/ec2-user/java
