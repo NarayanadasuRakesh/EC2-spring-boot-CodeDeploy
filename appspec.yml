@@ -11,8 +11,12 @@ files:
 permissions:
   - object: /home/ec2-user/java
     pattern: '**'
+    mode: '0755'
     owner: root
     group: root
+    type:
+      - file 
+      - directory
 
 hooks:
   ApplicationStop:
