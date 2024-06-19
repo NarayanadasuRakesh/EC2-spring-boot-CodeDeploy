@@ -15,10 +15,6 @@ phases:
       - mvn clean install
 artifacts:
   files:
-    - 'target/**/*'  # Which files should be included from dist/my-angular-project directory
+    - 'target/**/*'  
     - appspec.yml
     - 'scripts/**/*'
-# artifacts:
-#   files:
-#     - '**/*'
-#   base-directory: './'
